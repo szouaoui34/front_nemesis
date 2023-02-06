@@ -1,0 +1,11 @@
+version: '3'
+services:
+  my-vue-app:
+    image: my-vue-app
+    container_name: front_container
+    volumes:
+      - ./app:/app/
+    ports:
+      - "5173:5173"
+      - "8636:8636"
+    command: [ "npm", "run", "dev" ]
